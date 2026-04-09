@@ -69,6 +69,8 @@ def decode_message(msg):
 
     elif "call me urgent" in msg:
         return ("He Needs Money", "Uncertain", "High")
+    elif "we need to talk tomorrow" in msg_lower:
+        return ("Now real problem🥶,Started", "Danger☠️", "High")
     else:
         return ai_decode(msg)
 
