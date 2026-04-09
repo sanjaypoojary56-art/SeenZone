@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StatusMind</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #22c55e;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #334155;
+            border-radius: 10px;
+        }
+        .logo{
+            display: block;
+            margin: 0 auto 15px;
+            width:80px;
+            border-radius: 20%;
+            filter:drop-shadow(0 0 10px #22c55e);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="\static\logo.png" class="logo" alt="logo"
+    <h1>StatusMind</h1>
+
+    <form method="POST">
+        <input type="text" name="message" placeholder="Enter message..." required>
+        <button type="submit">Decode</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <p><b>Message:</b> {{ result.message }}</p>
+        <p><b>Meaning:</b> {{ result.meaning }}</p>
+        <p><b>Tone:</b> {{ result.tone }}</p>
+        <p><b>Risk:</b> {{ result.risk }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
