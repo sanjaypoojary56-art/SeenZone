@@ -1,4 +1,4 @@
-    import json
+import json
 import os
 from flask import Flask, render_template, request
 from google import genai
