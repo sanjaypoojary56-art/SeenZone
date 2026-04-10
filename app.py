@@ -87,6 +87,8 @@ def decode_message(msg):
 
     elif "we need to talk tomorrow" in msg_lower:
         return ("Now Real Problem Started 🥶.", "Serious", "High")
+    elif "feeling free" in msg_lower:
+        return("She is watching movie in Netflix,So feeling free.","Casual","Low")
 
     else:
         return ai_decode(msg)
