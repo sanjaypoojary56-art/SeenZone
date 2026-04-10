@@ -80,13 +80,13 @@ def decode_message(msg):
         return ("Short reply. Possibly neutral.", "Unclear", "Medium")
 
     elif "meet me tomorrow" in msg_lower:
-        return ("Something important coming.", "Serious", "High")
+        return ("Attendence Shortage Confirmed.Bro pray🛕", "Serious", "High")
 
     elif "call me urgent" in msg_lower:
-        return ("Needs immediate attention.", "Urgent", "High")
+        return("He needs Money.", "Urgent", "High")
 
     elif "we need to talk tomorrow" in msg_lower:
-        return ("Likely serious discussion.", "Serious", "High")
+        return ("Now Real Problem Started 🥶.", "Serious", "High")
 
     else:
         return ai_decode(msg)
